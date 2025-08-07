@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background: #181818;
+  }
+  
+  body {
+    background: #181818;
+    color: white;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #5D5CDE 0%, #7C3AED 100%);
+  }
+  
+  .crypto-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .loading-spinner {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #5D5CDE;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+  }
+  
+  .section {
+    display: block;
+  }
+  
+  .section.hidden {
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+}
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 24, 24, 24;
+  --background-end-rgb: 24, 24, 24;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 24, 24, 24;
+    --background-end-rgb: 24, 24, 24;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #181818;
+  min-height: 100vh;
+}
+
+html {
+  background: #181818;
+}
+
+#__next {
+  background: #181818;
+  min-height: 100vh;
+}
